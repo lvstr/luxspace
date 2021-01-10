@@ -3,7 +3,7 @@ const smoothScrollAnchor = document.querySelectorAll("a[href^='#']");
 for (let index = 0; index < smoothScrollAnchor.length; index++) {
   const el = smoothScrollAnchor[index];
 
-  el.addEventListener("click", (ev) => {
+  el.addEventListener("click", function (ev) {
     ev.preventDefault();
 
     if (document.getElementById(this.getAttribute("href").replace("#", "")))
