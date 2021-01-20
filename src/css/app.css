@@ -37,11 +37,32 @@
     background-size: 37.5%;
   }
 
+  /* Card */
+
   .card .card-shadow {
     @apply transition duration-300 shadow-none h-full;
   }
   .card:hover .card-shadow {
     @apply shadow-lg;
+  }
+
+  /* Breadcrumb */
+
+  ul.breadcrumb {
+    @apply flex flex-row items-center text-lg;
+  }
+
+  ul.breadcrumb li:not(:last-child):after {
+    content: "/";
+    @apply px-4;
+  }
+
+  ul.breadcrumb li:not(:last-child) a {
+    @apply font-light;
+  }
+
+  ul.breadcrumb li:last-child a {
+    @apply font-semibold;
   }
 }
 
@@ -66,4 +87,11 @@
     @apply w-20 h-20 -translate-x-1/2 -translate-y-1/2;
     background-size: auto;
   }
+}
+a.cart svg circle.dot {
+  @apply hidden;
+}
+
+a.cart.cart-filled svg circle.dot {
+  @apply block;
 }
